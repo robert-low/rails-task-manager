@@ -15,7 +15,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     @task.save
-    redirect_to task_path(@task)
+    redirect_to tasks_path
   end
 
   def edit
@@ -28,17 +28,17 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    redirect_to tasks_path, status: :see_other
+    redirect_to tasks_path
   end
 
   private
 
-  # strong_params for ForbiddenAttributes
-  def task_params
-    params.require(:task).permit(:title, :details)
-  end
-
   def set_task # Finds a task
     @task = Task.find(params[:id])
+  end
+
+  # strong_params for ForbiddenAttributes
+  def task_params
+    params.require(:task).permit(:title, :details, :completed)
   end
 end
