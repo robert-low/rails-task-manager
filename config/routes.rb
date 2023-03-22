@@ -15,4 +15,7 @@ Rails.application.routes.draw do
   patch 'tasks/:id', to: 'tasks#update'
 
   delete 'tasks/:id', to: 'tasks#destroy' # Delete a task
+
+  ## REFACTORED ROUTES ---->
+  # resources :tasks, only: %i[index show new create edit update destroy]
 end
