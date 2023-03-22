@@ -1,6 +1,6 @@
 # Task Manager
 
-A task manager utilising basic CRUD features. Re-built for the purposes of my teaching assistant role.
+A task manager utilising basic CRUD features in Rails.
 
 1. As a user, I can list tasks
 2. As a user, I can view the details of a task
