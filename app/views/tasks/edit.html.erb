@@ -1,11 +1,10 @@
-<%= form_with model: @task do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.label :completed? %>
-  <%= f.check_box :completed %>
-  <%= f.submit %>
-<% end %>
+<div class="container mt-5">
+  <h1>Edit task</h1>
 
-<p><%= link_to 'Back to tasks', tasks_path %></p>
+  <%= render 'form', task: @task %>
+
+  <hr>
+  <%= link_to tasks_path do %>
+    <i class="fa-solid fa-arrow-rotate-left"></i> Back to list
+  <% end %>
+</div>
