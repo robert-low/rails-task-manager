@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get 'tasks', to: 'tasks#index' # Index page
-  get 'tasks/:id', to: 'tasks#show' # Show page
+  get 'tasks/:id', to: 'tasks#show', as: :task # Show page
 end
