@@ -18,9 +18,4 @@
   <%= link_to tasks_path do %>
     <i class="fa-solid fa-arrow-rotate-left"></i> Back to list
   <% end %>
-
-  <p><%= link_to 'Delete this task',
-  task_path(@task),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %></p>
 </div>
